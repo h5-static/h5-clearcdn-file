@@ -3,6 +3,7 @@ var argv =  process.argv;
 var rootPath = process.cwd();
 var path =  require("path");
 var glob = require("glob");
+var format = require("json-format");
 
 function ClearCdn (obj) {
 
@@ -30,7 +31,7 @@ ClearCdn.prototype.readFile = function (path,link) {
 
 		self.json["clearCDN"] = self.createOnline(file, path);
 
-		fs.writeFileSync(self.target, JSON.stringify(self.json));
+		fs.writeFileSync(self.target, format(self.json));
 
 
 	});
@@ -45,7 +46,9 @@ ClearCdn.prototype.createOnline = function (arr, path) {
 	var linkArr = path.split("/");
 	arr.forEach(function(item){
 
-		var str = self.link + "/" + self.json.bizname;
+		var bizname = self.json.bizname ? self.json.bizname : self.getBizname();
+
+		var str = self.link + "/" + bizname;
 		var itemarr = item.split("/");
 		itemarr.forEach(function(item){
 
@@ -63,6 +66,15 @@ ClearCdn.prototype.createOnline = function (arr, path) {
 	})
 
 	return resultArr;
+
+}
+
+ClearCdn.prototype.getBizname = function () {
+
+	var arr = this.json.ftpkey.split(".")
+	var bizname = arr[arr.length - 1];
+
+	return bizname;
 
 }
 

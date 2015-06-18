@@ -44,3 +44,5 @@ thumbs.db
 .idea
 node_modules/
 jscoverage_lib/
+handlebar/
+static-site.json

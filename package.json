@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/h5-static/h5-clearcdn-file",
   "dependencies": {
-    "glob": "^5.0.10"
+    "glob": "^5.0.10",
+    "json-format": "0.0.1"
   }
 }
