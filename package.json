@@ -1,0 +1,27 @@
+{
+  "name": "h5-clearcdn-file",
+  "version": "0.0.0",
+  "description": "create clear cnd file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/h5-static/h5-clearcdn-file.git"
+  },
+  "keywords": [
+    "clear",
+    "cdn",
+    "file"
+  ],
+  "author": "mengdong.wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/h5-static/h5-clearcdn-file/issues"
+  },
+  "homepage": "https://github.com/h5-static/h5-clearcdn-file",
+  "dependencies": {
+    "glob": "^5.0.10"
+  }
+}
