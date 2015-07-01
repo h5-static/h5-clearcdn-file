@@ -1,6 +1,6 @@
 {
   "name": "h5-clearcdn-file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "create clear cnd file",
   "main": "index.js",
   "scripts": {
