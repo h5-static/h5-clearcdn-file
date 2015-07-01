@@ -7,7 +7,7 @@ var format = require("json-format");
 
 function ClearCdn (obj) {
 
-	this.link = obj && obj.link ? obj.link : "http://h5.dianping.com/tuan",
+	this.link = obj && obj.link ? obj.link : "http://h5.dianping.com",
 	this.path = obj && obj.path ? obj.path : rootPath + "/handlebar/**/*.*",
 	this.target = obj && obj.target ? obj.target : rootPath+"/static-site.json";
 
