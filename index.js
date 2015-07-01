@@ -31,6 +31,8 @@ ClearCdn.prototype.readFile = function (path,link) {
 
 		self.json["clearCDN"] = self.createOnline(file, path);
 
+		console.log(self.json);
+
 		fs.writeFileSync(self.target, format(self.json));
 
 
@@ -48,7 +50,7 @@ ClearCdn.prototype.createOnline = function (arr, path) {
 
 		var bizname = self.json.bizname ? self.json.bizname : self.getBizname();
 
-		var str = self.link + "/" + bizname;
+		var str = self.join(self.link, bizname);
 		var itemarr = item.split("/");
 		itemarr.forEach(function(item){
 
@@ -66,6 +68,22 @@ ClearCdn.prototype.createOnline = function (arr, path) {
 	})
 
 	return resultArr;
+
+}
+
+ClearCdn.prototype.join = function(link, bizname) {
+
+	var biznameArr = bizname.split("/");
+	var arr = [];
+	arr.push(link);
+
+	biznameArr.forEach(function(item){
+		if(!!item){
+			arr.push(item);
+		}
+	})
+
+	return arr.join("/");
 
 }
 

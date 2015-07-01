@@ -2,9 +2,9 @@
 	"ftpkey": "cortex-ci.static-site-ftp.fun",
 	"html_dir": "html",
 	"clearCDN": [
-		"http://h5.dianping.com/tuan/fun/a.appcache",
-		"http://h5.dianping.com/tuan/fun/a.html",
-		"http://h5.dianping.com/tuan/fun/test/a.html",
-		"http://h5.dianping.com/tuan/fun/test/a/a.html"
+		"http://h5.dianping.com/a/b/c/a.appcache",
+		"http://h5.dianping.com/a/b/c/a.html",
+		"http://h5.dianping.com/a/b/c/test/a.html",
+		"http://h5.dianping.com/a/b/c/test/a/a.html"
 	]
 }
