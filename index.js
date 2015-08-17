@@ -8,8 +8,8 @@ var format = require("json-format");
 function ClearCdn (obj) {
 
 	this.link = obj && obj.link ? obj.link : "http://h5.dianping.com",
-	this.path = obj && obj.path ? obj.path : rootPath + "/handlebar/**/*.*",
-	this.target = obj && obj.target ? obj.target : rootPath+"/static-site.json";
+	this.path = obj && obj.path ? obj.path : path.join(rootPath,"handlebar", "**", "*.*").replace(/\\/g,"/"),
+	this.target = obj && obj.target ? obj.target : rootPath + "/static-site.json";
 
 	this.json = JSON.parse(fs.readFileSync( this.target, "utf-8"));
 
@@ -27,11 +27,10 @@ ClearCdn.prototype.readFile = function (path,link) {
 		if(err){
 
 			return;
+
 		}
 
 		self.json["clearCDN"] = self.createOnline(file, path);
-
-		console.log(self.json);
 
 		fs.writeFileSync(self.target, format(self.json));
 
@@ -46,12 +45,15 @@ ClearCdn.prototype.createOnline = function (arr, path) {
 	var resultArr = [];
 
 	var linkArr = path.split("/");
+
 	arr.forEach(function(item){
 
 		var bizname = self.json.bizname ? self.json.bizname : self.getBizname();
 
 		var str = self.join(self.link, bizname);
+
 		var itemarr = item.split("/");
+
 		itemarr.forEach(function(item){
 
 			if(linkArr.indexOf(item) == -1){
@@ -102,4 +104,8 @@ function init (object) {
 
 }
 
+init();
+
 module.exports =  init;
+
+“abc\ ffdsaf fdsaf".replace(/\\/)

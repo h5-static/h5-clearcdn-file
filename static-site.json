@@ -1,10 +1,11 @@
 {
 	"ftpkey": "cortex-ci.static-site-ftp.fun",
 	"html_dir": "html",
+	"bizname": "movie",
 	"clearCDN": [
-		"http://h5.dianping.com/a/b/c/a.appcache",
-		"http://h5.dianping.com/a/b/c/a.html",
-		"http://h5.dianping.com/a/b/c/test/a.html",
-		"http://h5.dianping.com/a/b/c/test/a/a.html"
+		"http://h5.dianping.com/movie/a.appcache",
+		"http://h5.dianping.com/movie/a.html",
+		"http://h5.dianping.com/movie/test/a.html",
+		"http://h5.dianping.com/movie/test/a/a.html"
 	]
 }
