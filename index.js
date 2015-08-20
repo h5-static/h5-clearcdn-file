@@ -104,8 +104,4 @@ function init (object) {
 
 }
 
-init();
-
 module.exports =  init;
-
-“abc\ ffdsaf fdsaf".replace(/\\/)
