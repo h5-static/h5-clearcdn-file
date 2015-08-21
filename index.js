@@ -64,6 +64,10 @@ ClearCdn.prototype.createOnline = function (arr, path) {
 
 		})
 
+		if(/\.html/.test(str)){
+			resultArr.push(str+"?product=dpapp");
+		}
+
 		resultArr.push(str);
 
 
